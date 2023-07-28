@@ -1,0 +1,8 @@
+
+{"type":"run-start"}
+{"artifactFutureId":"Aragon:ACL","constructorArgs":[],"contractName":"ACL","dependencies":[],"futureId":"Aragon:ACL","futureType":"NAMED_CONTRACT_DEPLOYMENT","libraries":{},"strategy":"basic","type":"execution-start","value":"0"}
+{"artifactFutureId":"Aragon:EVMScriptRegistryFactory","constructorArgs":[],"contractName":"EVMScriptRegistryFactory","dependencies":[],"futureId":"Aragon:EVMScriptRegistryFactory","futureType":"NAMED_CONTRACT_DEPLOYMENT","libraries":{},"strategy":"basic","type":"execution-start","value":"0"}
+{"artifactFutureId":"Aragon:Kernel","constructorArgs":[true],"contractName":"Kernel","dependencies":[],"futureId":"Aragon:Kernel","futureType":"NAMED_CONTRACT_DEPLOYMENT","libraries":{},"strategy":"basic","type":"execution-start","value":"0"}
+{"args":[],"artifactFutureId":"Aragon:ACL","contractName":"ACL","executionId":1,"from":"0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266","futureId":"Aragon:ACL","libraries":{},"subtype":"deploy-contract","type":"onchain-action","value":"0"}
+{"type":"run-start"}
+{"type":"run-start"}

@@ -1,0 +1,14 @@
+{
+  "name": "ignition-aragon",
+  "devDependencies": {
+    "@ignored/hardhat-ignition": "^0.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.4",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "ethers": "^6.6.7",
+    "hardhat": "^2.17.0"
+  },
+  "dependencies": {
+    "@aragon/id": "^2.1.1",
+    "@aragon/os": "^4.4.0"
+  }
+}
