@@ -3,18 +3,18 @@ import hre from 'hardhat';
 
 const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000';
 const ANY_ENTITY = '0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF';
-const CREATE_REPO_ROLE = hre.ethers.id('CREATE_REPO_ROLE');
-const CREATE_NAME_ROLE = hre.ethers.id('CREATE_NAME_ROLE');
+const CREATE_REPO_ROLE = hre.ethers.utils.id('CREATE_REPO_ROLE');
+const CREATE_NAME_ROLE = hre.ethers.utils.id('CREATE_NAME_ROLE');
 
 const tldName = 'eth';
 const labelName = 'aragonpm';
-const tldHash = hre.ethers.namehash(tldName);
-const labelHash = hre.ethers.id(labelName);
+const tldHash = hre.ethers.utils.namehash(tldName);
+const labelHash = hre.ethers.utils.id(labelName);
 
 const openTldName = 'aragonpm.eth';
 const openLabelName = 'open';
-const openTldHash = hre.ethers.namehash(openTldName);
-const openLabelHash = hre.ethers.id(openLabelName);
+const openTldHash = hre.ethers.utils.namehash(openTldName);
+const openLabelHash = hre.ethers.utils.id(openLabelName);
 
 function grantRole(m: any, apm:any , registrar:any, owner: any, role: string) {
   const kernelAddress = m.staticCall(apm, 'kernel');

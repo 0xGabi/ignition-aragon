@@ -2,7 +2,7 @@ import { HardhatUserConfig } from "hardhat/config";
 
 import "@ignored/hardhat-ignition";
 import "@nomicfoundation/hardhat-toolbox";
-import "@nomicfoundation/hardhat-ethers";
+import "@nomiclabs/hardhat-ethers";
 
 const config: HardhatUserConfig = {
   solidity: {
