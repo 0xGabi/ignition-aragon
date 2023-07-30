@@ -3,6 +3,9 @@ import { ethers } from "hardhat";
 
 import AragonOS from "./AragonOS";
 
+export const tld = ethers.utils.namehash("eth");
+export const label = ethers.utils.namehash("aragonpm");
+
 const AragonPMFactory = buildModule("AragonPMFactory", (m) => {
   const owner = m.getAccount(0);
 
@@ -34,6 +37,11 @@ const AragonPMFactory = buildModule("AragonPMFactory", (m) => {
     ens,
     ethers.constants.AddressZero,
   ]);
+
+  // Assigning ENS name to factory
+  m.call(ens, "setSubnodeOwner", [tld, label, apmRegistryFactory], {
+    id: "CallSetSubnodeOwnerAPM",
+  });
 
   return {
     apmRegistry,
