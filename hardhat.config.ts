@@ -5,6 +5,15 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-ethers";
 
 const config: HardhatUserConfig = {
+  networks: {
+    frame: {
+      chainId: 10,
+      url: 'http://127.0.0.1:1248',
+      httpHeaders: { origin: "hardhat" },
+      timeout: 0,
+      gas: 0,
+    }
+  },
   solidity: {
     compilers: [
       {
@@ -12,7 +21,7 @@ const config: HardhatUserConfig = {
         settings: {
           optimizer: {
             enabled: true,
-            runs: 1000,
+            runs: 10000,
           },
         },
       },
