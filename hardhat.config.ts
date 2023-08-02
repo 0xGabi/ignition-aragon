@@ -3,6 +3,7 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@ignored/hardhat-ignition";
 import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-etherscan"
 
 const config: HardhatUserConfig = {
   networks: {
@@ -12,7 +13,10 @@ const config: HardhatUserConfig = {
       httpHeaders: { origin: "hardhat" },
       timeout: 0,
       gas: 0,
-    }
+    },
+    optimism: {
+      url: "https://optimism.publicnode.com",
+    },
   },
   solidity: {
     compilers: [
@@ -26,6 +30,9 @@ const config: HardhatUserConfig = {
         },
       },
     ],
+  },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_API_KEY,
   }
 };
 

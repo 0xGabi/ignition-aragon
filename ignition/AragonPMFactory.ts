@@ -4,7 +4,7 @@ import { ethers } from "hardhat";
 import AragonOS from "./AragonOS";
 
 export const tld = ethers.utils.namehash("eth");
-export const label = ethers.utils.namehash("aragonpm");
+export const label = ethers.utils.id("aragonpm");
 
 const AragonPMFactory = buildModule("AragonPMFactory", (m) => {
   const owner = m.getAccount(0);
@@ -12,16 +12,16 @@ const AragonPMFactory = buildModule("AragonPMFactory", (m) => {
   const { daoFactory } = m.useModule(AragonOS);
 
   // DEPLOY_APM_REGISTRY_BASE
-  const apmRegistry = m.contract("APMRegistry", []);
+  const apmRegistry = m.contract("APMRegistry");
 
   // DEPLOY_REPO_BASE
-  const apmRepo = m.contract("Repo", []);
+  const apmRepo = m.contract("Repo");
 
   // DEPLOY_ENS_SUBDOMAIN_REGISTRAR
-  const ensSubdomainRegistrar = m.contract("ENSSubdomainRegistrar", []);
+  const ensSubdomainRegistrar = m.contract("ENSSubdomainRegistrar");
 
   // DEPLOY_ENS_FACTORY
-  const ensFactory = m.contract("ENSFactory", []);
+  const ensFactory = m.contract("ENSFactory");
 
   // DEPLOY_ENS
   const calNewENS = m.call(ensFactory, "newENS", [owner]);
@@ -39,9 +39,7 @@ const AragonPMFactory = buildModule("AragonPMFactory", (m) => {
   ]);
 
   // Assigning ENS name to factory
-  m.call(ens, "setSubnodeOwner", [tld, label, apmRegistryFactory], {
-    id: "CallSetSubnodeOwnerAPM",
-  });
+  m.call(ens, "setSubnodeOwner", [tld, label, apmRegistryFactory]);
 
   return {
     apmRegistry,

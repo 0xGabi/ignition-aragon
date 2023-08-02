@@ -8,5 +8,6 @@
   "AragonPMFactory:ENSSubdomainRegistrar": "0xF5C9D4f966eF613Ab528AB640343D2F39e69deED",
   "AragonPMFactory:Repo": "0xB6eA4812e97Ee3F380742710d31BBEfc07502445",
   "AragonPMFactory:APMRegistryFactory": "0x7d5F3C0671104579716d8A265462d331e3caaD45",
-  "AragonID:FIFSResolvingRegistrar": "0x44ADB013bE98F04d9E525d033E2D85Ce5E195D8F"
+  "AragonID:FIFSResolvingRegistrar": "0x44ADB013bE98F04d9E525d033E2D85Ce5E195D8F",
+  "MinimeFactory:MiniMeTokenFactory": "0xb5314953f96e12cab6BdB9eaa79922e657783142"
 }

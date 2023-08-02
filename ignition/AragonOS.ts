@@ -10,10 +10,10 @@ const AragonOS = buildModule("AragonOS", (m) => {
   const kernelBase = m.contract("Kernel", [petrify]);
 
   // DEPLOY_ACL_BASE
-  const aclBase = m.contract("ACL", []);
+  const aclBase = m.contract("ACL");
 
   // DEPLOY_EVMSCRIPT_REGISTRY_FACTORY
-  const evmScriptRegistryFactory = m.contract("EVMScriptRegistryFactory", []);
+  const evmScriptRegistryFactory = m.contract("EVMScriptRegistryFactory");
 
   // DEPLOY_DAO_FACTORY
   const daoFactory = m.contract("DAOFactory", [
