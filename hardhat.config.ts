@@ -5,6 +5,9 @@ import "@nomicfoundation/hardhat-toolbox";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan"
 
+import * as tdly from "@tenderly/hardhat-tenderly";
+tdly.setup();
+
 const config: HardhatUserConfig = {
   networks: {
     frame: {
